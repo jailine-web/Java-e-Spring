@@ -1,0 +1,26 @@
+package program;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import services.TaxService;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		TaxService taxService = new TaxService();
+		
+		System.out.println();
+		String name = sc.next();
+		System.out.println();
+		double grossSalary = sc.nextDouble();
+		
+		//double netSalary = 
+		
+	}
+
+}
