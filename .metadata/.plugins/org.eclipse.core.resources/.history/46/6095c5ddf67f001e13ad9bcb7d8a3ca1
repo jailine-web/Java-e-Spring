@@ -1,0 +1,5 @@
+package com.exercicio.demo.services;
+
+public class ShippingService {
+
+}

@@ -1,0 +1,19 @@
+package com.exercicio.demo.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.exercicio.demo.entities.Order;
+
+@Service
+public class OrderService {
+
+	@Autowired
+	private ShippingService shippingService;
+	
+	public double total (Order order) {
+		double value = shippingService.shipment(order);
+		
+		return value + order.getDiscount();
+	}
+}

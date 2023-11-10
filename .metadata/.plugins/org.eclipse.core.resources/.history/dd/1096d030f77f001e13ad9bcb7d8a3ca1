@@ -1,0 +1,23 @@
+package com.exercicio.demo.services;
+
+import org.springframework.stereotype.Service;
+
+import com.exercicio.demo.entities.Order;
+
+@Service
+public class ShippingService {
+
+
+	public double shipment(Order order) {
+		
+		if(order.getBasic() > 100d && order.getBasic()<200d) {
+			return order.getBasic() - 12d;
+		}
+		else if(order.getBasic() < 100) {
+			return order.getBasic() - 20d;
+		}
+		
+		return order.getBasic();
+	}
+}
+

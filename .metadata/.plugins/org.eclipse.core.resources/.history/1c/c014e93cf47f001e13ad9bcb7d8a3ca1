@@ -1,0 +1,5 @@
+package com.exercicio.demo.entities;
+
+public class Order {
+
+}

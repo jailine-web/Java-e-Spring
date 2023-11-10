@@ -1,0 +1,36 @@
+package com.exercicio.demo.entities;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+@EqualsAndHashCode(exclude = {"basic", "discount"})
+@NoArgsConstructor
+@AllArgsConstructor
+public class Order {
+
+	private Integer codigo;
+	private Double basic;
+	private Double discount;
+	
+	public Integer getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+	public Double getBasic() {
+		return basic;
+	}
+	public void setBasic(Double basic) {
+		this.basic = basic;
+	}
+	public Double getDiscount() {
+		return discount;
+	}
+	public void setDiscount(Double discount) {
+		this.discount = discount;
+	}
+	
+	
+}
