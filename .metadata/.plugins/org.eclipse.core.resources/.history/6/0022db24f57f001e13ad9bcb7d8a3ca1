@@ -1,9 +1,0 @@
-package com.exercicio.demo.entities;
-
-public class Order {
-
-	private Integer codigo;
-	private Double basic;
-	private Double discount;
-	
-}
