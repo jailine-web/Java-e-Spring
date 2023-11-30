@@ -6,7 +6,7 @@ public class PersonDepartmentDTO {
 
 	private Long id;
 	private String name;
-	private Double Salary;
+	private Double salary;
 	
 	DepartmentDTO departmentDTO;
 
@@ -14,14 +14,14 @@ public class PersonDepartmentDTO {
 			DepartmentDTO departmentDTO) {
 		this.id = id;
 		this.name = name;
-		Salary = salary;
+		salary = salary;
 		this.departmentDTO = departmentDTO;
 	}
 
 	public PersonDepartmentDTO(Person person) {
 		id = person.getId();
 		name = person.getName();
-		Salary = person.getSalary();
+		salary = person.getSalary();
 		departmentDTO = new DepartmentDTO(person.getDepartment());
 	}
 	
@@ -34,7 +34,7 @@ public class PersonDepartmentDTO {
 	}
 
 	public Double getSalary() {
-		return Salary;
+		return salary;
 	}
 
 	public DepartmentDTO getDepartmentDTO() {
