@@ -38,6 +38,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Documents\Java e Spring essentials\aula-lazy"/>
+			<item value="D:\Documents\Java e Spring essentials\aula-salvar-para-muitos"/>
 			<item value="D:\Documents\Java e Spring essentials\aula-salvar-para-um"/>
 		</list>
 	</section>

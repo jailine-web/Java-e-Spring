@@ -17,9 +17,21 @@
     <fullyQualifiedTypeName name="com.exercicio.demo.entities.Order"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="com.exercicio.demo.services.OrderService"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.exercicio.demo.services.ShippingService"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.DepartamentDTO"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.PersonDepartmentDTO"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Person"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aula.repositories.PersonRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Department"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.DepartmentDTO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.CategoryDTO"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Product"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Category"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.ProductDTO"/>
 </qualifiedTypeNameHistroy>
