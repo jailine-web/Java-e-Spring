@@ -34,4 +34,8 @@
     <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Product"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Category"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.ProductDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.context.properties.bind.DefaultValue"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="com.devsuperior.aulalazy.dto.EmployeeMinDTO"/>
 </qualifiedTypeNameHistroy>
