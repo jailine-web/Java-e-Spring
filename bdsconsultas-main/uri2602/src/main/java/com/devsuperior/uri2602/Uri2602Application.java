@@ -29,7 +29,19 @@ public class Uri2602Application implements CommandLineRunner{
 		List<CustomerDTO> result1 = list.stream().map(x -> new CustomerDTO(x))
 				.collect(Collectors.toList());
 		
+		System.out.println("Resultado SQL Raiz: ");
 		for(CustomerDTO c: result1) {
+			System.out.println(c);
+			
+		}
+		
+		System.out.println("\n \n");
+
+		List<CustomerDTO> list2 = repository.searchNameViaJPQL("rs");
+		
+		System.out.println("Resultado JPQL: ");
+		
+		for(CustomerDTO c: list2) {
 			System.out.println(c);
 			
 		}
