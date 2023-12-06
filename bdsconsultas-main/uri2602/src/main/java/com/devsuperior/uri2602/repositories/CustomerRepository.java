@@ -14,6 +14,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long>{
 			""" 
 			SELECT name 
 			FROM customers 
-			WHERE state = :state """)
+			WHERE UPPER(state) = UPPER(:state) """)
 	List<CustomerProjection> searchName(String state);
 }

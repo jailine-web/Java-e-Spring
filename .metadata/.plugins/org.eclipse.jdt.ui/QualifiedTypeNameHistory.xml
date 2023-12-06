@@ -13,7 +13,6 @@
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="lombok.EqualsAndHashCode"/>
     <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
     <fullyQualifiedTypeName name="com.exercicio.demo.entities.Order"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="com.exercicio.demo.services.OrderService"/>
@@ -25,11 +24,9 @@
     <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.PersonDepartmentDTO"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Person"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.repositories.PersonRepository"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Department"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.DepartmentDTO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.DTO.CategoryDTO"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Product"/>
     <fullyQualifiedTypeName name="com.devsuperior.aula.entities.Category"/>
@@ -38,4 +35,19 @@
     <fullyQualifiedTypeName name="org.springframework.boot.context.properties.bind.DefaultValue"/>
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
     <fullyQualifiedTypeName name="com.devsuperior.aulalazy.dto.EmployeeMinDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="org.yaml.snakeyaml.events.Event.ID"/>
+    <fullyQualifiedTypeName name="com.devsuperior.uri2602.entities.Customer"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.devsuperior.uri2602.repositories.CustumerRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.devsuperior.uri2602.projections.CustomerProjection"/>
+    <fullyQualifiedTypeName name="com.devsuperior.uri2602.DTO.CustomerDTO"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>
