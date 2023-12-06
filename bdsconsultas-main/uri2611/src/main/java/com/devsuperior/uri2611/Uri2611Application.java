@@ -27,10 +27,16 @@ public class Uri2611Application implements CommandLineRunner{
 		List<MovieProjection> list = movieRepository.searchArgs("Action");
 		List<MovieDTO> result = list.stream().map(x -> new MovieDTO(x)).collect(Collectors.toList());
 		
-		System.out.println("SQL raiz");
+		System.out.println("\nSQL raiz");
 		for(MovieDTO m : result) {
 			System.out.println(m);
 		}
 		
+		List<MovieDTO> result2 = movieRepository.searchArgsJPQL("Action");
+		
+		System.out.println("\nResultado da consulta JPQL");
+		for(MovieDTO m : result2) {
+			System.out.println(m);
+		}
 	}
 }
