@@ -34,5 +34,11 @@ public class Uri2609Application implements CommandLineRunner {
 			System.out.println(c);
 		}
 		
+		
+		List<CategorySumDTO> result2 = repository.searchJPQL();
+		System.out.println("\nResultado da consulta JPQL");
+		for(CategorySumDTO c : result2) {
+			System.out.println(c);
+		}
 	}
 }
