@@ -3,23 +3,10 @@
 --- www.urionlinejudge.com.br
 --- Problem 2609
 
-CREATE TABLE categories (
-  id numeric PRIMARY KEY,
-  name varchar
-);
-
-CREATE TABLE products (
-  id numeric PRIMARY KEY,
-  name varchar(50),
-  amount numeric,
-  price numeric(7,2),
-  id_categories numeric REFERENCES categories (id)
-);
+INSERT INTO categories (id, name) VALUES (1, 'wood');
 
 INSERT INTO categories (id, name)
-VALUES 
-  (1,	'wood'),
-  (2,	'luxury'),
+VALUES(2,	'luxury'),
   (3,	'vintage'),
   (4,	'modern'),
   (5,	'super luxury');
