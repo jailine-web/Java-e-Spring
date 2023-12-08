@@ -26,5 +26,8 @@ public interface LawyerRepository extends JpaRepository<Lawyer, Long> {
 			+ "(SELECT 'Average', ROUND(avg(customers_number),0) "
 			+ "FROM lawyers)")
 	List<LawyerMinProjection> search();
+	
+	
+	
 
 }

@@ -33,13 +33,10 @@ public class Uri2737Application implements CommandLineRunner {
 		for(LawyerMinDTO c : result) {
 			System.out.println(c);
 		}
-//		
-//		
-//		List<CategorySumDTO> result2 = repository.searchJPQL();
-//		System.out.println("\nResultado da consulta JPQL");
-//		for(CategorySumDTO c : result2) {
-//			System.out.println(c);
-//		}
+
+		/*
+		 * O JPQL não possui o elemento union e sua alternativa é muito trabalhosa 
+		 */
 
 	}
 }
