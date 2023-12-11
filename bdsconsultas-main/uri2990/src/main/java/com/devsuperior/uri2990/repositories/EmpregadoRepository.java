@@ -31,7 +31,17 @@ public interface EmpregadoRepository extends JpaRepository<Empregado, Long> {
 			+ "   FROM Empregado obj "
 			+ "   INNER JOIN obj.projetosOndeTrabalha "
 			+ ") "
-			+ "ORDER BY obj.cpf")
+			+ "ORDER BY obj.cpf ")
 	List<EmpregadoDeptDTO> searchJPQL();
 	
+
+	@Query(nativeQuery = true, value = "SELECT e.cpf, e.enome, d.dnome "
+			+ "FROM empregados as e "
+			+ "INNER JOIN departamentos as d "
+			+ "ON e.dnumero = d.dnumero "
+			+ "LEFT JOIN trabalha as t  "
+			+ "ON t.cpf_emp = e.cpf "
+			+ "WHERE t.cpf_emp IS NULL "
+			+ "ORDER BY e.cpf ")
+	List<EmpregadoDeptProjection> searchSQLeft();
 }

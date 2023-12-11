@@ -26,10 +26,9 @@ public class Uri2990Application implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		
 		List<EmpregadoDeptProjection> list = repository.search();
-		List<EmpregadoDeptDTO>  result = list.stream().map(x -> new EmpregadoDeptDTO(x))
-				.collect(Collectors.toList());
+		List<EmpregadoDeptDTO>  result = list.stream().map(x -> new EmpregadoDeptDTO(x)).collect(Collectors.toList());
 		
-		System.out.println("\n\nConsulta SQL Raiz");
+		System.out.println("\n\nConsulta SQL Raiz - comando NOT IN");
 		for(EmpregadoDeptDTO emp: result) {
 			System.out.println(emp);
 		}
@@ -41,5 +40,15 @@ public class Uri2990Application implements CommandLineRunner {
 		for(EmpregadoDeptDTO emp: result2) {
 			System.out.println(emp);
 		}
+		
+		List<EmpregadoDeptProjection> list2 = repository.searchSQLeft();
+		List<EmpregadoDeptDTO>  result3 = list2.stream().map(x -> new EmpregadoDeptDTO(x))
+				.collect(Collectors.toList());
+		
+		System.out.println("\n\nConsulta SQL com o comando left");
+		for(EmpregadoDeptDTO emp: result3) {
+			System.out.println(emp);
+		}
+		
 	}
 }
