@@ -4,11 +4,11 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -29,8 +29,8 @@ public class SaleService {
 		return new SaleMinDTO(entity);
 	}
 
-	
-	public List<SaleMinDTO> findReport(String minDate, String maxDate, String name) {
+	public Page<SaleMinDTO> findReport(String minDate, String maxDate, 
+			String name, Pageable pageable) {
 
 		LocalDate dateMax, dateMin;
 
@@ -42,7 +42,7 @@ public class SaleService {
 			dateMax = transformDate(maxDate);
 		}
 
-		if (minDate.equals("")) {
+		if(minDate.equals("")) {
 			dateMin = dateMax.minusYears(1);
 
 		} 
@@ -50,12 +50,9 @@ public class SaleService {
 			dateMin = transformDate(minDate);
 		}
 
-		List<SaleProjection> report = repository.searchReport(dateMin, dateMax, name);
-		List<SaleMinDTO> list = report.stream().map(x -> new SaleMinDTO(x)).collect(Collectors.toList());
-
-		return list;
+		Page<SaleMinDTO> report = repository.searchReportJpql(dateMin, dateMax, name, pageable);
+		return report;
 	}
-
 	
 	private LocalDate transformDate(String date) {
 
