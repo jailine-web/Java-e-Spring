@@ -3,6 +3,7 @@ package com.devsuperior.dsmeta.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,12 +32,10 @@ public class SaleController {
 			@RequestParam(value = "minDate"  , defaultValue = "") String dateMin, 
 			@RequestParam(value = "maxDate"  , defaultValue = "") String dateMax, 
 			@RequestParam(value = "name"     , defaultValue = "") String name, 
-			@RequestParam(value = "page", defaultValue = "0") Integer page,
-		    @RequestParam(value = "size", defaultValue = "10") Integer size) {
+			Pageable pageable) {
 		
-		PageRequest pageRequest = PageRequest.of(page, size);
 		    	
-	Page<SaleMinDTO> sales = service.findReport(dateMin, dateMax, name, pageRequest);
+	Page<SaleMinDTO> sales = service.findReport(dateMin, dateMax, name, pageable);
 		
 		return ResponseEntity.ok().body(sales);
 	}
