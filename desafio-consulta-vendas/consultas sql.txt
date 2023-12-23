@@ -1,0 +1,7 @@
+"SELECT  s.id , sr.name , SUM(s.amount) as amount, s.date "
+			+ "FROM tb_sales as s "
+			+ "INNER JOIN tb_seller as sr "
+			+ "ON s.seller_id = sr.id "
+			+ "WHERE date between :minDate AND :maxDate "
+			+ "AND UPPER(sr.name) LIKE UPPER(CONCAT('%', :name , '%')) "
+			+ "GROUP BY s.id ")

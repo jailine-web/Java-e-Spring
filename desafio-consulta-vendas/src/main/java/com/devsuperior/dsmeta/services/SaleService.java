@@ -4,6 +4,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -13,8 +14,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.devsuperior.dsmeta.dto.SaleMinDTO;
+import com.devsuperior.dsmeta.dto.SellerDTO;
 import com.devsuperior.dsmeta.entities.Sale;
-import com.devsuperior.dsmeta.projections.SaleProjection;
+import com.devsuperior.dsmeta.projections.SellerProjection;
 import com.devsuperior.dsmeta.repositories.SaleRepository;
 
 @Service
@@ -50,7 +52,9 @@ public class SaleService {
 			dateMin = transformDate(minDate);
 		}
 
+		
 		Page<SaleMinDTO> report = repository.searchReportJpql(dateMin, dateMax, name, pageable);
+		
 		return report;
 	}
 	
@@ -61,4 +65,31 @@ public class SaleService {
 		return formattedDate;
 	}
 
+	public List<SellerDTO> findSumary(String dataInicial, String dataFinal){
+
+		LocalDate maxDate, minDate;
+
+		if (dataFinal.equals("")) {
+			maxDate = LocalDate.ofInstant(Instant.now(), ZoneId.systemDefault());
+		}  
+
+		else {
+			maxDate = transformDate(dataFinal);
+		}
+
+		if(dataInicial.equals("")) {
+			minDate = maxDate.minusYears(1);
+
+		} 
+		else {
+			minDate = transformDate(dataInicial);
+		}
+
+		List<SellerProjection> list = repository.searchSales(minDate, maxDate);
+		List<SellerDTO> result = list.stream().map(x -> new SellerDTO(x)).collect(Collectors.toList());
+		
+		return result;
+	}
+	
+	
 }
