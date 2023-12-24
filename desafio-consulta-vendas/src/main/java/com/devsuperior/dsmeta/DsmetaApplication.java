@@ -12,7 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.devsuperior.dsmeta.dto.SaleMinDTO;
-import com.devsuperior.dsmeta.dto.SellerDTO;
+import com.devsuperior.dsmeta.dto.SellerReduzidoDTO;
 import com.devsuperior.dsmeta.projections.SellerProjection;
 import com.devsuperior.dsmeta.repositories.SaleRepository;
 
@@ -36,7 +36,7 @@ public class DsmetaApplication implements CommandLineRunner {
 		
 		
 		List<SellerProjection> list = repository.searchSales(LocalDate.parse("2022-05-01"), LocalDate.parse("2022-05-30"));
-		List<SellerDTO> result = list.stream().map(x -> new SellerDTO(x)).collect(Collectors.toList());
+		List<SellerReduzidoDTO> result = list.stream().map(x -> new SellerReduzidoDTO(x)).collect(Collectors.toList());
 		
 		
 		System.out.println("\nInício da consulta JPQL");
@@ -50,7 +50,7 @@ public class DsmetaApplication implements CommandLineRunner {
 		
 		System.out.println("\nInício da consulta SQL");
 		
-		for(SellerDTO dto : result) {
+		for(SellerReduzidoDTO dto : result) {
 			System.out.println(dto);
 		}
 		

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.devsuperior.dsmeta.dto.SaleMinDTO;
-import com.devsuperior.dsmeta.dto.SellerDTO;
+import com.devsuperior.dsmeta.dto.SellerReduzidoDTO;
 import com.devsuperior.dsmeta.services.SaleService;
 
 @RestController
@@ -44,11 +44,11 @@ public class SaleController {
 
 	
 	@GetMapping(value = "/summary")
-	public ResponseEntity<List<SellerDTO>> getSummary(
+	public ResponseEntity<List<SellerReduzidoDTO>> getSummary(
 			@RequestParam(value = "dataInicial", defaultValue = "") String dataInicial,
 			@RequestParam(value = "dataFinal", defaultValue = "") String dataFinal) {
 		
-		List<SellerDTO> result = service.findSumary(dataInicial, dataFinal);
+		List<SellerReduzidoDTO> result = service.findSumary(dataInicial, dataFinal);
 		
 		return ResponseEntity.ok().body(result);
 	}
