@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.devsuperior.dsmeta.dto.SaleMinDTO;
+import com.devsuperior.dsmeta.dto.SellerReduzidoDTO;
 import com.devsuperior.dsmeta.entities.Sale;
 import com.devsuperior.dsmeta.projections.SellerProjection;
 
@@ -44,6 +45,12 @@ public interface SaleRepository extends JpaRepository<Sale, Long> {
 			+ "group by sr.name ")
 	List<SellerProjection> searchSales(LocalDate dataInicial, LocalDate dataFinal);
 	
+	
+	@Query("SELECT new com.devsuperior.dsmeta.dto.SellerReduzidoDTO(obj.seller.name, sum(obj.amount)) "
+			+ "FROM Sale obj "
+			+ "WHERE date between :dataInicial AND :dataFinal "
+			+ "group by obj.seller.name ")
+	List<SellerReduzidoDTO> searchSalesJpql(LocalDate dataInicial, LocalDate dataFinal);
 	
 	
 	

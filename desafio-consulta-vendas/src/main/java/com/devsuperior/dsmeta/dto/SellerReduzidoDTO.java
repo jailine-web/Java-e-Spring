@@ -37,7 +37,7 @@ public class SellerReduzidoDTO {
 
 	@Override
 	public String toString() {
-		return "SellerDTO [Name:" + name + ", Quantia:" + quantia + "]";
+		return "SellerDTO [Name:" + name + ", \nQuantia:" + quantia + "]";
 	}
 
 	

@@ -35,9 +35,9 @@ public class DsmetaApplication implements CommandLineRunner {
 				LocalDate.parse("2022-05-30"), "odinson", pageable);
 		
 		
-		List<SellerProjection> list = repository.searchSales(LocalDate.parse("2022-05-01"), LocalDate.parse("2022-05-30"));
-		List<SellerReduzidoDTO> result = list.stream().map(x -> new SellerReduzidoDTO(x)).collect(Collectors.toList());
-		
+//		List<SellerProjection> list = repository.searchSales(LocalDate.parse("2022-05-01"), LocalDate.parse("2022-05-30"));
+//		List<SellerReduzidoDTO> result = list.stream().map(x -> new SellerReduzidoDTO(x)).collect(Collectors.toList());
+//		
 		
 		System.out.println("\nInício da consulta JPQL");
 		
@@ -48,14 +48,14 @@ public class DsmetaApplication implements CommandLineRunner {
 		System.out.println("\nFim da consulta JPQL");
 		
 		
-		System.out.println("\nInício da consulta SQL");
-		
-		for(SellerReduzidoDTO dto : result) {
-			System.out.println(dto);
-		}
-		
-		System.out.println("\nFim da consulta SQL");
-		
+//		System.out.println("\nInício da consulta JPQL");
+//		
+//		for(SellerReduzidoDTO dto : result) {
+//			System.out.println(dto);
+//		}
+//		
+//		System.out.println("\nFim da consulta JPQL");
+//		
 		
 		
 	}

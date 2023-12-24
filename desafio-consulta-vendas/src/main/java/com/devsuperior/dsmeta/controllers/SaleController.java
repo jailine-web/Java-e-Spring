@@ -46,10 +46,12 @@ public class SaleController {
 	@GetMapping(value = "/summary")
 	public ResponseEntity<List<SellerReduzidoDTO>> getSummary(
 			@RequestParam(value = "dataInicial", defaultValue = "") String dataInicial,
-			@RequestParam(value = "dataFinal", defaultValue = "") String dataFinal) {
+			@RequestParam(value = "dataFinal"  , defaultValue = "") String dataFinal) {
 		
 		List<SellerReduzidoDTO> result = service.findSumary(dataInicial, dataFinal);
 		
 		return ResponseEntity.ok().body(result);
 	}
+	
+	
 }
